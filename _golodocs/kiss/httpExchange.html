@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>Documentation for kiss.httpExchange</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      color: #333;
+      background-color: #fff;
+      border-color: #999999;
+      border-width: 2px;
+      line-height: 1.5;
+      margin: 2em 3em 2em 20%;
+      text-align: left;
+      padding: 0 100px 0 100px;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      overflow: auto;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 80%;
+      background-color: #eee;
+      padding: 1px 3px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+    }
+    pre code {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    li p {
+      margin: 0.3em;
+    }
+    ul > li {
+      list-style-type: disc;
+    }
+    a:link, a:visited {
+      color: #33e;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #00f;
+      text-decoration:underline;
+    }
+    h1 {
+      color: #999;
+      font-weight: 400;
+      font-size: 36px;
+    }
+    h2 {
+      border-bottom: 1px dotted #aaa;
+      margin-bottom: 1em;
+      color: #333;
+      font-size: 30px;
+    }
+    h3 {
+      color: #666;
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 21px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+
+    #toc {
+      margin: 0;
+      padding: 1em;
+      border-right: 1px solid #aaa;
+      font-size: 80%;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      width: 20%;
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+    #toc ul {
+      padding-left: 1em;
+    }
+
+    #toc > li {
+      list-style: none;
+      margin-bottom: 1ex;
+    }
+
+    #toc > li > a {
+      font-weight: bold;
+    }
+
+    :target {
+      background-color: yellow;
+    }
+
+    .permalink {
+      margin-left: .3em;
+      font-size: 70%;
+      visibility: hidden;
+    }
+
+    *:hover > .permalink {
+      visibility: visible;
+    }
+
+  </style>
+</head>
+<body>
+<h1>Documentation for kiss.httpExchange</h1>
+<div>
+  
+</div>
+
+<!-- begin table of content -->
+<ul id="toc">
+
+  
+  <li><a href="#structs">Structs</a><ul>
+    
+    <li><a href="#httpExchange">httpExchange</a></li>
+    
+  </ul></li>
+  
+
+  
+  <li><a href="#namedAugmentations">Named Augmentations</a><ul>
+    
+    <li><a href="#restGlue">restGlue</a><ul>
+      
+      <li><a href="#restGlue.$delete_this_templateRoute_condition_work">$delete(this, templateRoute, condition, work)</a></li>
+      
+      <li><a href="#restGlue.$delete_this_templateRoute_work">$delete(this, templateRoute, work)</a></li>
+      
+      <li><a href="#restGlue.$get_this_templateRoute_condition_work">$get(this, templateRoute, condition, work)</a></li>
+      
+      <li><a href="#restGlue.$get_this_templateRoute_work">$get(this, templateRoute, work)</a></li>
+      
+      <li><a href="#restGlue.$post_this_templateRoute_condition_work">$post(this, templateRoute, condition, work)</a></li>
+      
+      <li><a href="#restGlue.$post_this_templateRoute_work">$post(this, templateRoute, work)</a></li>
+      
+      <li><a href="#restGlue.$put_this_templateRoute_condition_work">$put(this, templateRoute, condition, work)</a></li>
+      
+      <li><a href="#restGlue.$put_this_templateRoute_work">$put(this, templateRoute, work)</a></li>
+      
+      </ul></li>
+    
+  </ul></li>
+  
+
+  
+  <li><a href="#augmentations">Augmentations</a><ul>
+    
+    <li><a href="#augment.httpExchange">httpExchange</a><ul>
+      
+      <li><a href="#httpExchange.all_this_work">all(this, work)</a></li>
+      
+      <li><a href="#httpExchange.contentTypeOfFile_this_path">contentTypeOfFile(this, path)</a></li>
+      
+      <li><a href="#httpExchange.method_this_method_routeCondition_condition_work">method(this, method, routeCondition, condition, work)</a></li>
+      
+      <li><a href="#httpExchange.method_this_method_routeCondition_work">method(this, method, routeCondition, work)</a></li>
+      
+      <li><a href="#httpExchange.method_this_method_work">method(this, method, work)</a></li>
+      
+      <li><a href="#httpExchange.route_this_method_routeTemplate_condition_work">route(this, method, routeTemplate, condition, work)</a></li>
+      
+      <li><a href="#httpExchange.route_this_method_routeTemplate_work">route(this, method, routeTemplate, work)</a></li>
+      
+      <li><a href="#httpExchange.static_this_staticAssetsDirectory_defaultPage">static(this, staticAssetsDirectory, defaultPage)</a></li>
+      
+    </ul></li>
+    
+  </ul></li>
+  
+
+  
+</ul>
+<!-- end table of content -->
+
+
+  <h2 id="structs">Structs</h2>
+  
+    <h3 id="httpExchange">httpExchange
+    <a class="permalink" href="#httpExchange" title="link to this section">&#182;</a></h3>
+
+    <h5>Members</h5>
+    <ul>
+    
+      <li><code>response</code></li>
+  
+      <li><code>request</code></li>
+  
+    </ul>
+    <div>
+      
+    </div>
+  
+
+
+
+
+  <h2 id="namedAugmentations">Named Augmentations</h2>
+  
+    <h3 id="restGlue">restGlue
+    <a class="permalink" href="#restGlue" title="link
+    to this section">&#182;</a></h3>
+    <div>
+      <p>Add some syntactic glue to kiss rest methods
+Augmentation of kiss.httpExchange</p>
+
+    </div>
+    
+      
+        <h4 id="restGlue.$delete_this_templateRoute_condition_work">$delete(this, templateRoute, condition, work)
+      
+      <a class="permalink" href="#restGlue.$delete_this_templateRoute_condition_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="restGlue.$delete_this_templateRoute_work">$delete(this, templateRoute, work)
+      
+      <a class="permalink" href="#restGlue.$delete_this_templateRoute_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="restGlue.$get_this_templateRoute_condition_work">$get(this, templateRoute, condition, work)
+      
+      <a class="permalink" href="#restGlue.$get_this_templateRoute_condition_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="restGlue.$get_this_templateRoute_work">$get(this, templateRoute, work)
+      
+      <a class="permalink" href="#restGlue.$get_this_templateRoute_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="restGlue.$post_this_templateRoute_condition_work">$post(this, templateRoute, condition, work)
+      
+      <a class="permalink" href="#restGlue.$post_this_templateRoute_condition_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="restGlue.$post_this_templateRoute_work">$post(this, templateRoute, work)
+      
+      <a class="permalink" href="#restGlue.$post_this_templateRoute_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="restGlue.$put_this_templateRoute_condition_work">$put(this, templateRoute, condition, work)
+      
+      <a class="permalink" href="#restGlue.$put_this_templateRoute_condition_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="restGlue.$put_this_templateRoute_work">$put(this, templateRoute, work)
+      
+      <a class="permalink" href="#restGlue.$put_this_templateRoute_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+  
+
+
+
+
+  <h2 id="augmentations">Augmentations</h2>
+  
+    <h3 id="augment.httpExchange">httpExchange
+    <a class="permalink" href="#augment.httpExchange" title="link to this section">&#182;</a></h3>
+    <div>
+      
+    </div>
+    
+    
+      
+        <h4 id="httpExchange.all_this_work">all(this, work)
+      
+      <a class="permalink" href="#httpExchange.all_this_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpExchange.contentTypeOfFile_this_path">contentTypeOfFile(this, path)
+      
+      <a class="permalink" href="#httpExchange.contentTypeOfFile_this_path" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpExchange.method_this_method_routeCondition_condition_work">method(this, method, routeCondition, condition, work)
+      
+      <a class="permalink" href="#httpExchange.method_this_method_routeCondition_condition_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpExchange.method_this_method_routeCondition_work">method(this, method, routeCondition, work)
+      
+      <a class="permalink" href="#httpExchange.method_this_method_routeCondition_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpExchange.method_this_method_work">method(this, method, work)
+      
+      <a class="permalink" href="#httpExchange.method_this_method_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpExchange.route_this_method_routeTemplate_condition_work">route(this, method, routeTemplate, condition, work)
+      
+      <a class="permalink" href="#httpExchange.route_this_method_routeTemplate_condition_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpExchange.route_this_method_routeTemplate_work">route(this, method, routeTemplate, work)
+      
+      <a class="permalink" href="#httpExchange.route_this_method_routeTemplate_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpExchange.static_this_staticAssetsDirectory_defaultPage">static(this, staticAssetsDirectory, defaultPage)
+      
+      <a class="permalink" href="#httpExchange.static_this_staticAssetsDirectory_defaultPage" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+  
+
+
+
+
+</body>
+</html>

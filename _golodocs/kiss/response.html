@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>Documentation for kiss.response</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      color: #333;
+      background-color: #fff;
+      border-color: #999999;
+      border-width: 2px;
+      line-height: 1.5;
+      margin: 2em 3em 2em 20%;
+      text-align: left;
+      padding: 0 100px 0 100px;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      overflow: auto;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 80%;
+      background-color: #eee;
+      padding: 1px 3px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+    }
+    pre code {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    li p {
+      margin: 0.3em;
+    }
+    ul > li {
+      list-style-type: disc;
+    }
+    a:link, a:visited {
+      color: #33e;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #00f;
+      text-decoration:underline;
+    }
+    h1 {
+      color: #999;
+      font-weight: 400;
+      font-size: 36px;
+    }
+    h2 {
+      border-bottom: 1px dotted #aaa;
+      margin-bottom: 1em;
+      color: #333;
+      font-size: 30px;
+    }
+    h3 {
+      color: #666;
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 21px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+
+    #toc {
+      margin: 0;
+      padding: 1em;
+      border-right: 1px solid #aaa;
+      font-size: 80%;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      width: 20%;
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+    #toc ul {
+      padding-left: 1em;
+    }
+
+    #toc > li {
+      list-style: none;
+      margin-bottom: 1ex;
+    }
+
+    #toc > li > a {
+      font-weight: bold;
+    }
+
+    :target {
+      background-color: yellow;
+    }
+
+    .permalink {
+      margin-left: .3em;
+      font-size: 70%;
+      visibility: hidden;
+    }
+
+    *:hover > .permalink {
+      visibility: visible;
+    }
+
+  </style>
+</head>
+<body>
+<h1>Documentation for kiss.response</h1>
+<div>
+  
+</div>
+
+<!-- begin table of content -->
+<ul id="toc">
+
+  
+  <li><a href="#structs">Structs</a><ul>
+    
+    <li><a href="#response">response</a></li>
+    
+  </ul></li>
+  
+
+  
+
+  
+  <li><a href="#augmentations">Augmentations</a><ul>
+    
+    <li><a href="#augment.response">response</a><ul>
+      
+      <li><a href="#response.SSEInit_this">SSEInit(this)</a></li>
+      
+      <li><a href="#response.SSEWrite_this_data">SSEWrite(this, data)</a></li>
+      
+      <li><a href="#response.allowCORS_this_origin_methods_headers">allowCORS(this, origin, methods, headers)</a></li>
+      
+      <li><a href="#response.contentType_this">contentType(this)</a></li>
+      
+      <li><a href="#response.contentType_this_content_type">contentType(this, content_type)</a></li>
+      
+      <li><a href="#response.cookie_this_name_value">cookie(this, name, value)</a></li>
+      
+      <li><a href="#response.headers_this">headers(this)</a></li>
+      
+      <li><a href="#response.html_this_value">html(this, value)</a></li>
+      
+      <li><a href="#response.json_this_value">json(this, value)</a></li>
+      
+      <li><a href="#response.redirect_this_location_code">redirect(this, location, code)</a></li>
+      
+      <li><a href="#response.redirect_this_location">redirect(this, location)</a></li>
+      
+      <li><a href="#response.removeCookie_this_name">removeCookie(this, name)</a></li>
+      
+      <li><a href="#response.send_this">send(this)</a></li>
+      
+      <li><a href="#response.text_this_value">text(this, value)</a></li>
+      
+    </ul></li>
+    
+  </ul></li>
+  
+
+  
+</ul>
+<!-- end table of content -->
+
+
+  <h2 id="structs">Structs</h2>
+  
+    <h3 id="response">response
+    <a class="permalink" href="#response" title="link to this section">&#182;</a></h3>
+
+    <h5>Members</h5>
+    <ul>
+    
+      <li><code>content</code></li>
+  
+      <li><code>code</code></li>
+  
+      <li><code>message</code></li>
+  
+      <li><code>exchange</code></li>
+  
+    </ul>
+    <div>
+      
+    </div>
+  
+
+
+
+
+
+
+
+  <h2 id="augmentations">Augmentations</h2>
+  
+    <h3 id="augment.response">response
+    <a class="permalink" href="#augment.response" title="link to this section">&#182;</a></h3>
+    <div>
+      
+    </div>
+    
+    
+      
+        <h4 id="response.SSEInit_this">SSEInit(this)
+      
+      <a class="permalink" href="#response.SSEInit_this" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.SSEWrite_this_data">SSEWrite(this, data)
+      
+      <a class="permalink" href="#response.SSEWrite_this_data" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.allowCORS_this_origin_methods_headers">allowCORS(this, origin, methods, headers)
+      
+      <a class="permalink" href="#response.allowCORS_this_origin_methods_headers" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.contentType_this">contentType(this)
+      
+      <a class="permalink" href="#response.contentType_this" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.contentType_this_content_type">contentType(this, content_type)
+      
+      <a class="permalink" href="#response.contentType_this_content_type" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.cookie_this_name_value">cookie(this, name, value)
+      
+      <a class="permalink" href="#response.cookie_this_name_value" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.headers_this">headers(this)
+      
+      <a class="permalink" href="#response.headers_this" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.html_this_value">html(this, value)
+      
+      <a class="permalink" href="#response.html_this_value" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.json_this_value">json(this, value)
+      
+      <a class="permalink" href="#response.json_this_value" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.redirect_this_location_code">redirect(this, location, code)
+      
+      <a class="permalink" href="#response.redirect_this_location_code" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.redirect_this_location">redirect(this, location)
+      
+      <a class="permalink" href="#response.redirect_this_location" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.removeCookie_this_name">removeCookie(this, name)
+      
+      <a class="permalink" href="#response.removeCookie_this_name" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.send_this">send(this)
+      
+      <a class="permalink" href="#response.send_this" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="response.text_this_value">text(this, value)
+      
+      <a class="permalink" href="#response.text_this_value" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+  
+
+
+
+
+</body>
+</html>

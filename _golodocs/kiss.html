@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+
+<html>
+<head>
+  <title>Documentation for kiss</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: Helvetica, Arial, sans-serif;
+      color: #333;
+      background-color: #fff;
+      border-color: #999999;
+      border-width: 2px;
+      line-height: 1.5;
+      margin: 2em 3em 2em 20%;
+      text-align: left;
+      padding: 0 100px 0 100px;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      overflow: auto;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      font-size: 80%;
+      background-color: #eee;
+      padding: 1px 3px;
+      -webkit-border-radius: 2px;
+      -moz-border-radius: 2px;
+      border-radius: 2px;
+    }
+    pre code {
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    li p {
+      margin: 0.3em;
+    }
+    ul > li {
+      list-style-type: disc;
+    }
+    a:link, a:visited {
+      color: #33e;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #00f;
+      text-decoration:underline;
+    }
+    h1 {
+      color: #999;
+      font-weight: 400;
+      font-size: 36px;
+    }
+    h2 {
+      border-bottom: 1px dotted #aaa;
+      margin-bottom: 1em;
+      color: #333;
+      font-size: 30px;
+    }
+    h3 {
+      color: #666;
+      font-size: 24px;
+    }
+    h4 {
+      font-size: 21px;
+    }
+    h5 {
+      font-size: 18px;
+    }
+
+    #toc {
+      margin: 0;
+      padding: 1em;
+      border-right: 1px solid #aaa;
+      font-size: 80%;
+      position: fixed;
+      top: 0px;
+      bottom: 0px;
+      left: 0px;
+      width: 20%;
+      overflow: auto;
+      white-space: nowrap;
+    }
+
+    #toc ul {
+      padding-left: 1em;
+    }
+
+    #toc > li {
+      list-style: none;
+      margin-bottom: 1ex;
+    }
+
+    #toc > li > a {
+      font-weight: bold;
+    }
+
+    :target {
+      background-color: yellow;
+    }
+
+    .permalink {
+      margin-left: .3em;
+      font-size: 70%;
+      visibility: hidden;
+    }
+
+    *:hover > .permalink {
+      visibility: visible;
+    }
+
+  </style>
+</head>
+<body>
+<h1>Documentation for kiss</h1>
+<div>
+  
+</div>
+
+<!-- begin table of content -->
+<ul id="toc">
+
+  
+  <li><a href="#structs">Structs</a><ul>
+    
+    <li><a href="#httpServer">httpServer</a></li>
+    
+    <li><a href="#messageStructure">messageStructure</a></li>
+    
+  </ul></li>
+  
+
+  
+
+  
+  <li><a href="#augmentations">Augmentations</a><ul>
+    
+    <li><a href="#augment.httpServer">httpServer</a><ul>
+      
+      <li><a href="#httpServer.getHttpRequest_this_url_contentType">getHttpRequest(this, url, contentType)</a></li>
+      
+      <li><a href="#httpServer.initialize_this_work">initialize(this, work)</a></li>
+      
+      <li><a href="#httpServer.start_this_message">start(this, message)</a></li>
+      
+      <li><a href="#httpServer.start_this">start(this)</a></li>
+      
+      <li><a href="#httpServer.stop_this_sec">stop(this, sec)</a></li>
+      
+      <li><a href="#httpServer.stop_this">stop(this)</a></li>
+      
+      <li><a href="#httpServer.warmUp_this_howMany">warmUp(this, howMany)</a></li>
+      
+      <li><a href="#httpServer.watch_this_directories_work">watch(this, directories, work)</a></li>
+      
+      <li><a href="#httpServer.when404_this_workWenSomethingWrong">when404(this, workWenSomethingWrong)</a></li>
+      
+      <li><a href="#httpServer.whenError_this_workWenSomethingWrong">whenError(this, workWenSomethingWrong)</a></li>
+      
+    </ul></li>
+    
+    <li><a href="#augment.java.net.URI">java.net.URI</a><ul>
+      
+      <li><a href="#java.net.URI.parts_this">parts(this)</a></li>
+      
+    </ul></li>
+    
+  </ul></li>
+  
+
+  
+  <li><a href="#functions">Functions</a><ul>
+    
+    <li><a href="#HttpServer_host_port_work">HttpServer(host, port, work)</a></li>
+    
+    <li><a href="#message_msg">message(msg)</a></li>
+    
+  </ul></li>
+  
+</ul>
+<!-- end table of content -->
+
+
+  <h2 id="structs">Structs</h2>
+  
+    <h3 id="httpServer">httpServer
+    <a class="permalink" href="#httpServer" title="link to this section">&#182;</a></h3>
+
+    <h5>Members</h5>
+    <ul>
+    
+      <li><code>host</code></li>
+  
+      <li><code>port</code></li>
+  
+      <li><code>_serverInstance</code></li>
+  
+      <li><code>_when404</code></li>
+  
+      <li><code>_whenError</code></li>
+  
+      <li><code>env</code></li>
+  
+      <li><code>application</code></li>
+  
+    </ul>
+    <div>
+      
+    </div>
+  
+    <h3 id="messageStructure">messageStructure
+    <a class="permalink" href="#messageStructure" title="link to this section">&#182;</a></h3>
+
+    <h5>Members</h5>
+    <ul>
+    
+      <li><code>message</code></li>
+  
+    </ul>
+    <div>
+      
+    </div>
+  
+
+
+
+
+
+
+
+  <h2 id="augmentations">Augmentations</h2>
+  
+    <h3 id="augment.httpServer">httpServer
+    <a class="permalink" href="#augment.httpServer" title="link to this section">&#182;</a></h3>
+    <div>
+      
+    </div>
+    
+    
+      
+        <h4 id="httpServer.getHttpRequest_this_url_contentType">getHttpRequest(this, url, contentType)
+      
+      <a class="permalink" href="#httpServer.getHttpRequest_this_url_contentType" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.initialize_this_work">initialize(this, work)
+      
+      <a class="permalink" href="#httpServer.initialize_this_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.start_this_message">start(this, message)
+      
+      <a class="permalink" href="#httpServer.start_this_message" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.start_this">start(this)
+      
+      <a class="permalink" href="#httpServer.start_this" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.stop_this_sec">stop(this, sec)
+      
+      <a class="permalink" href="#httpServer.stop_this_sec" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.stop_this">stop(this)
+      
+      <a class="permalink" href="#httpServer.stop_this" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.warmUp_this_howMany">warmUp(this, howMany)
+      
+      <a class="permalink" href="#httpServer.warmUp_this_howMany" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.watch_this_directories_work">watch(this, directories, work)
+      
+      <a class="permalink" href="#httpServer.watch_this_directories_work" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.when404_this_workWenSomethingWrong">when404(this, workWenSomethingWrong)
+      
+      <a class="permalink" href="#httpServer.when404_this_workWenSomethingWrong" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+      
+        <h4 id="httpServer.whenError_this_workWenSomethingWrong">whenError(this, workWenSomethingWrong)
+      
+      <a class="permalink" href="#httpServer.whenError_this_workWenSomethingWrong" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+  
+    <h3 id="augment.java.net.URI">java.net.URI
+    <a class="permalink" href="#augment.java.net.URI" title="link to this section">&#182;</a></h3>
+    <div>
+      
+    </div>
+    
+    
+      
+        <h4 id="java.net.URI.parts_this">parts(this)
+      
+      <a class="permalink" href="#java.net.URI.parts_this" title="link to this section">&#182;</a></h4>
+      <div>
+        
+      </div>
+    
+  
+
+
+
+  <h2 id="functions">Functions</h2>
+  
+    <h3 id="HttpServer_host_port_work">HttpServer(host, port, work)
+    <a class="permalink" href="#HttpServer_host_port_work" title="link to this section">&#182;</a></h3>
+    <div>
+      
+    </div>
+  
+    <h3 id="message_msg">message(msg)
+    <a class="permalink" href="#message_msg" title="link to this section">&#182;</a></h3>
+    <div>
+      
+    </div>
+  
+
+
+</body>
+</html>
